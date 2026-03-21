@@ -18,6 +18,12 @@ ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/re
 ; --- P2P/下载 ---
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Download/Download.list
 
+; --- 国内直连 ---
+ruleset=🎯 国内直连,[]GEOSITE,cn
+ruleset=🎯 国内直连,[]GEOIP,cn,no-resolve
+ruleset=DIRECT,[]GEOSITE,google-cn
+ruleset=DIRECT,[]GEOSITE,category-games@cn
+
 ; --- 应用分流 ---
 ruleset=👨🏻‍💻 GitHub,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list
 ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
@@ -27,13 +33,6 @@ ruleset=Ⓜ️ Microsoft,https://raw.githubusercontent.com/blackmatrix7/ios_rule
 ruleset=🎥 国外媒体,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
 ruleset=🎵 TikTok,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list
 ruleset=🎮 游戏,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Game/Game.list
-
-; --- 兜底代理规则 ---
-ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy.list
-
-; --- GFW 兜底代理 ---
-ruleset=🚀 节点选择,[]GEOSITE,gfw
-ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy.list
 
 ; --- 最终兜底 ---
 ruleset=🐟 漏网之鱼,[]FINAL
